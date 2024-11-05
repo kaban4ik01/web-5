@@ -8,18 +8,18 @@ document.getElementById('button').addEventListener('click', function(event) {
     const selectedPrice = parseFloat(tovarSelect.value);
     const quantity = parseFloat(quantityInput.value);
 
-    // Проверяем, вводит ли пользователь дробное число
+    // Проверка, вводит ли пользователь дробное число
     if (!Number.isInteger(quantity)) {
-        resultLabel.textContent = "Пожалуйста, введите целое число для количества.";
+        resultLabel.textContent = "Введите целое число для количества";
         return;
     }
 
-    // Проверяем, выбран ли товар
+    // Проверка, выбран ли товар
     if (isNaN(selectedPrice) || quantity < 1) {
-        resultLabel.textContent = "Пожалуйста, выберите товар и введите корректное количество.";
+        resultLabel.textContent = "Выберите товар и введите корректное количество";
         return;
     }
 
     const totalPrice = selectedPrice * quantity;
-    resultLabel.textContent = `Общая стоимость: ${totalPrice} руб.`;
+    resultLabel.textContent = `Стоимость: ${totalPrice} руб.`;
 });
