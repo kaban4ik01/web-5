@@ -1,4 +1,4 @@
-document.getElementById('button').addEventListener('click', function(event) {
+document.getElementById('button').addEventListener('click', function onClick(event) {
     event.preventDefault(); // предотвращаем отправку формы
 
     const tovarSelect = document.getElementById('tovar');
@@ -23,3 +23,11 @@ document.getElementById('button').addEventListener('click', function(event) {
     const totalPrice = selectedPrice * quantity;
     resultLabel.textContent = `Стоимость: ${totalPrice} руб.`;
 });
+
+
+
+window.addEventListener('DOMContentLoaded', function (event) {
+    console.log("DOM fully loaded and parsed");
+    let b = document.getElementById("button");
+    b.addEventListener("click", onClick);
+  });
