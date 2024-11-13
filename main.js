@@ -25,9 +25,3 @@ document.getElementById('button').addEventListener('click', function onClick(eve
 });
 
 
-
-window.addEventListener('DOMContentLoaded', function (event) {
-    console.log("DOM fully loaded and parsed");
-    let b = document.getElementById("button");
-    b.addEventListener("click", onClick());
-  });
